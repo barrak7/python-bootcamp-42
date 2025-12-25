@@ -12,9 +12,8 @@ def whatis(args: list[str]) -> None:
     print(("I'm Even.", "I'm Odd.")[num % 2])
 
 
-
 if __name__ == "__main__":
     try:
         whatis(sys.argv)
     except AssertionError as e:
-        print("AssertionError:",e)
+        print("AssertionError:", e)
