@@ -3,6 +3,13 @@ from ft_filter import ft_filter
 from collections.abc import Callable
 
 
+def validate_input(s: str):
+    """check if string only consists of alphanumeric characters and spaces"""
+    for e in s:
+        if not e.isalnum() and not e.isspace():
+            raise AssertionError
+
+
 def main():
     """
     Takes in 2 arguments, a string S, and a number N.
@@ -11,6 +18,7 @@ def main():
     """
     try:
         assert len(sys.argv) == 3, "the arguments are bad"
+        validate_input(sys.argv[1])
         s: list[str] = sys.argv[1].split()
         n: int = int(sys.argv[2])
 
