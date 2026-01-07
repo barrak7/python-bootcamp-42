@@ -48,3 +48,6 @@ Translate user input to morse code using `str.maketrans` and `str.translate`
 ## Ex08: ft_tqdm
 Implement a clone of tqdm.  
 an introduction into generators in python.
+
+## Ex09: ft_package
+build publishable python package using library of your choice.
