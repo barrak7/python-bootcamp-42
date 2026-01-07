@@ -35,3 +35,6 @@ Introduction to different null types in python.
 Create a program that takes in an integer as argument, check its parity, and raise an error if the input is not appropriate.
 
 Introduces standalone scripts with command line arguments, try-except statement, and Assert statement.
+
+## Ex05: building
+Prompting user for input, and parsing the input using built-in string functions.
