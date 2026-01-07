@@ -41,3 +41,6 @@ Prompting user for input, and parsing the input using built-in string functions.
 
 ## Ex06: ft_filter
 An intorduction into iterators. Implement custom iterator simulating built-in `filter` function.
+
+## Ex07: sos
+Translate user input to morse code using `str.maketrans` and `str.translate`
