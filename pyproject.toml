@@ -9,4 +9,5 @@ dependencies = []
 [dependency-groups]
 dev = [
     "flake8>=7.3.0",
+    "tqdm>=4.67.1",
 ]
