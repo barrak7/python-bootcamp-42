@@ -44,3 +44,7 @@ An intorduction into iterators. Implement custom iterator simulating built-in `f
 
 ## Ex07: sos
 Translate user input to morse code using `str.maketrans` and `str.translate`
+
+## Ex08: ft_tqdm
+Implement a clone of tqdm.  
+an introduction into generators in python.
