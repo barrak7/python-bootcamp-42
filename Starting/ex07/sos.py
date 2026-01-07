@@ -33,7 +33,7 @@ def validate_input(argv: list[str]):
         raise AssertionError
 
     for c in argv[1]:
-        if not c.isalnum() and not c.isspace:
+        if not c.isalnum() and not c.isspace():
             raise AssertionError
 
 
