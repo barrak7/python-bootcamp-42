@@ -30,3 +30,8 @@ Introduction to different null types in python.
 `None: NoneType, null data type`
 `nan: float value, not a number. Can happen in operation involving inf values`
 `False: boolean value`
+
+## Ex04: what is
+Create a program that takes in an integer as argument, check its parity, and raise an error if the input is not appropriate.
+
+Introduces standalone scripts with command line arguments, try-except statement, and Assert statement.
