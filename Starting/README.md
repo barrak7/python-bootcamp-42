@@ -17,3 +17,7 @@ Working with time and dates is important in data science. This exercise introduc
 
 `time` module is used to get the time in seconds since the epoch `January 9, 1970, 00:00 UTC`  
 `datetime` module is used to get the date of the day.
+
+## Ex02: find type
+This exercise introduces types, type hints, and functions.  
+Define a function that takes in a parameter of type `Any`, determines its type using built-in `type` function, and prints an appropriate message.
