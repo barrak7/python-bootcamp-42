@@ -21,3 +21,12 @@ Working with time and dates is important in data science. This exercise introduc
 ## Ex02: find type
 This exercise introduces types, type hints, and functions.  
 Define a function that takes in a parameter of type `Any`, determines its type using built-in `type` function, and prints an appropriate message.
+
+## Ex03: Null not found
+Introduction to different null types in python.
+
+`0: integer value 0`  
+`'': empty string literal`  
+`None: NoneType, null data type`
+`nan: float value, not a number. Can happen in operation involving inf values`
+`False: boolean value`
