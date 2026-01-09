@@ -1,4 +1,5 @@
 import os
+from typing import Generator
 
 
 def get_strftime(t: float) -> str:
@@ -14,7 +15,7 @@ def get_strftime(t: float) -> str:
     The (bool(curr_t) or bool(result)) term in the loop
     is to make sure that leading zero values aren't included.
     """
-    result: str = ''
+    result: str = ""
     div: int = 3600
 
     result += f"{int(t // div)}:".zfill(3) * (t > 3600)
@@ -33,7 +34,7 @@ def get_strftime(t: float) -> str:
 
 def format_time(et: float, eta: float, aspi: float) -> str:
     """
-    format elasped time, estimated time, and average seconds per iteration
+    format elapsed time, estimated time, and average seconds per iteration
     for tqdm.
 
     parameters:
@@ -48,8 +49,9 @@ def format_time(et: float, eta: float, aspi: float) -> str:
     """
     formatted_time: str
 
-    formatted_time = f"[{get_strftime(et)}<{get_strftime(eta)}," + \
-        f" {aspi:>5.2f}s/it]"
+    formatted_time = (
+        f"[{get_strftime(et)}<{get_strftime(eta)}," + f" {aspi:>5.2f}s/it]"
+    )
 
     return formatted_time
 
@@ -66,7 +68,7 @@ def get_bar_len(formatted_time: str, tit: int, tw: int) -> int:
     return bar_len
 
 
-def get_time(st: float, it: int, tit: int) -> tuple[float]:
+def get_time(st: float, it: int, tit: int) -> tuple[float, ...]:
     """
     Calculate elapsed time, eta, average second per second.
 
@@ -127,13 +129,13 @@ def print_bar(it: int, tit: int, tw: int, st: float) -> None:
     pl = round(pp * bar_len / 100)
 
     print(
-        f"\r{pp:>3}%|{chr(9608) * pl:<{bar_len}}|" +
-        f" {it}/{tit} {formatted_time}",
-        end=""
+        f"\r{pp:>3}%|{chr(9608) * pl:<{bar_len}}|"
+        + f" {it}/{tit} {formatted_time}",
+        end="",
     )
 
 
-def ft_tqdm(lst: range) -> None:
+def ft_tqdm(lst: range) -> Generator:
     """
     tqdm clone. Print a progress bar showing:
         - a percentage of the progress

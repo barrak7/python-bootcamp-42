@@ -12,9 +12,8 @@ class ft_filter:
     """
 
     def __init__(
-                self,
-                f: Callable[[Any], bool] | None,
-                iterable: Iterable[Any]) -> None:
+        self, f: Callable[[Any], bool] | None, iterable: Iterable[Any]
+    ) -> None:
         if not f:
             f = lambda x: bool(x)  # noqa: E731
 

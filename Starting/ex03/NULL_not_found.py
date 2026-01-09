@@ -1,4 +1,7 @@
-def NULL_not_found(object: any) -> int:
+from typing import Any
+
+
+def NULL_not_found(object: Any) -> int:
     if not object or object != object:
         val: str = str(object)
         types: dict[str, str] = {
@@ -6,7 +9,7 @@ def NULL_not_found(object: any) -> int:
             "None": "Nothing: None",
             "nan": "Cheese: nan",
             "0": "Zero: 0",
-            "False": "Fake: False"
+            "False": "Fake: False",
         }
 
         if val in types:

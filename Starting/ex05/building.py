@@ -7,10 +7,10 @@ def building(input_: str) -> None:
     punctuation marks, spaces, and digits in user input.
 
     Uses buit-in truth methods to detect category of character.
-    For punctuation marks, we use `in` operator over list of punctuations.
+    For punctuation marks, we use `in` operator over list of punctuation.
 
     After counting, it prints the length of the string,
-    and the count of each category on a seperate line.
+    and the count of each category on a separate line.
 
     Parameters
     ----------
@@ -55,7 +55,7 @@ def main():
 
     User input is read from stdin.
     If it doesn't end with a newline, a newline is printed
-    to seperate script output from user input on display.
+    to separate script output from user input on display.
 
     Call building function with user input.
     """

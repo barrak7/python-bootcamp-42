@@ -10,7 +10,7 @@ def validate_input(s: str):
             raise AssertionError
 
 
-def main():
+def main() -> None:
     """
     Takes in 2 arguments, a string S, and a number N.
 

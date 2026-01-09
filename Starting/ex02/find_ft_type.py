@@ -1,4 +1,7 @@
-def all_thing_is_obj(object: any) -> int:
+from typing import Any
+
+
+def all_thing_is_obj(object: Any) -> int:
     _type: type = type(object)
     _type_name: str = _type.__name__.title()
     _types: set[str] = {"List", "Tuple", "Dict", "Set", "Str"}
