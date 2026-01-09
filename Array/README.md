@@ -13,3 +13,51 @@ and
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
 ```
 - Takes a list of bmi scales and a limit. Returns a list of bool values indicating whether each scale is above the limit or not.
+
+## Ex01: 2D Array
+Working with 2D arrays using lists.
+
+It introduces the concept of slicing. Slicing is a syntax that allows you to take elements from an array given a starting and end position. A step offset can also be used.
+
+The syntax is as follows:
+```py
+slice_ = lst[start:step:stop]
+```
+example:
+```py
+numbers = [59, 97, 0, 42, 58, 39, 6, 67, 17, 33]
+print(numbers[1:4])
+# -> [97, 0, 42]
+```
+Slicing works for reading and assigning values to a list.
+
+Exercise Statement:
+```
+Write a function that takes as parameters a 2D array, prints its shape, and returns a
+truncated version of the array based on the provided start and end arguments using slicing.
+
+```
+```py
+# Prototype
+def slice_me(family: list, start: int, end: int) -> list:
+
+# Test
+from array2D import slice_me
+
+family = [[1.80, 78.4],
+        [2.15, 102.7],
+        [2.10, 98.5],
+        [1.88, 75.2]]
+
+print(slice_me(family, 0, 2))
+print(slice_me(family, 1, -2))
+```
+```shell
+# Expected output:
+My shape is : (4, 2)
+My new shape is : (2, 2)
+[[1.8, 78.4], [2.15, 102.7]]
+My shape is : (4, 2)
+My new shape is : (1, 2)
+[[2.15, 102.7]]
+```
