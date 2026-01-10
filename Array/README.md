@@ -116,6 +116,13 @@ img = 255 - img
 
 `ft_red` apply a red filter on the image using multiplication only.
 ```py
-img[:,:,1:] *= 0
+img[:,:,1:] = 0
 ```
 [Red filter](./imgs/red.png)
+
+`ft_green` apply a green filter on the image using multiplication only.
+```py
+img[:,:,0] = 0
+img[:,:,2] = 0
+```
+[green filter](./imgs/green.png)
