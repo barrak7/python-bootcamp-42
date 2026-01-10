@@ -34,7 +34,6 @@ def slice_me(family: list, start: int, end: int) -> list:
         print(f"My shape is : {get_shape(family)}")
 
         slice_ = family[start:end]
-        print(slice_)
 
         print(f"My new shape is : {get_shape(slice_)}")
     except Exception as e:
