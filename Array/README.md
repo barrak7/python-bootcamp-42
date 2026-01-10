@@ -100,3 +100,13 @@ This was done by splitting the array horizontally using `np.hsplit` and then sta
     img = np.hsplit(img, 400)
     img = np.stack(img)
 ```
+
+## Ex05: pimp my image
+create 5 functions that apply color filters to images.  
+For each filter there is a restriction of the possible arithmetic operations.
+
+The original image for reference:
+[Original image](./landscape.jpg)
+
+`ft_invert` invert the colors of the image. All arithmetic operators are allowed.
+[Inverted image](./inverted.png)
