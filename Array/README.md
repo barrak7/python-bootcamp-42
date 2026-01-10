@@ -90,3 +90,13 @@ The shape of image is: (257, 450, 3)
 Load an image using the previously created function, and zoom on it by splitting its array using slicing.
 
 After this transformation, the image is displayed using matplotlib.
+
+## Ex04: Rotate me
+Load the image, zoom on it, rotate it by transposing the array, and then display it.
+
+The array has to be transposed manually without using numpy built-in transpose method.  
+This was done by splitting the array horizontally using `np.hsplit` and then stacking the resulting arrays using `np.stack`.
+```py
+    img = np.hsplit(img, 400)
+    img = np.stack(img)
+```
