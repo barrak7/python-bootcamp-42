@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 
 def ft_invert(array: ndarray) -> ndarray:
     """Inverts the color of the image received."""
-
     try:
         array = 255 - array
 
@@ -21,7 +20,7 @@ def ft_invert(array: ndarray) -> ndarray:
 def ft_red(array: ndarray) -> ndarray:
     """Applies a red filter to the image received."""
     try:
-        array[:, :, 1:] *= 0
+        array[:, :, 1:] = 0
 
         print(array)
 
