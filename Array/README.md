@@ -85,3 +85,8 @@ The shape of image is: (257, 450, 3)
 [ 1 1 1]
 [ 1 1 1]]]
 ```
+
+## Ex03: Zoom on me
+Load an image using the previously created function, and zoom on it by splitting its array using slicing.
+
+After this transformation, the image is displayed using matplotlib.
