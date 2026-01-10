@@ -1,8 +1,9 @@
 from load_image import ft_load
-from pimp_image import ft_invert
+from pimp_image import ft_invert, ft_red
 
 array = ft_load("landscape.jpg")
 
 ft_invert(array)
+ft_red(array)
 
 print(ft_invert.__doc__)

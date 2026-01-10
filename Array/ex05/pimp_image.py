@@ -16,3 +16,18 @@ def ft_invert(array: ndarray) -> ndarray:
         print("Error:", e)
 
     return array
+
+
+def ft_red(array: ndarray) -> ndarray:
+    """Applies a red filter to the image received."""
+    try:
+        array[:, :, 1:] *= 0
+
+        print(array)
+
+        plt.imshow(array)
+        plt.show()
+    except Exception as e:
+        print("Error:", e)
+
+    return array

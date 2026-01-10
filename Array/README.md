@@ -109,4 +109,13 @@ The original image for reference:
 [Original image](./landscape.jpg)
 
 `ft_invert` invert the colors of the image. All arithmetic operators are allowed.
+```py
+img = 255 - img
+```
 [Inverted image](./inverted.png)
+
+`ft_red` apply a red filter on the image using multiplication only.
+```py
+img[:,:,1:] *= 0
+```
+[Red filter](./red.png)
