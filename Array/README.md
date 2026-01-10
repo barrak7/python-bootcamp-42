@@ -114,22 +114,33 @@ img = 255 - img
 ```
 [Inverted image](./imgs/inverted.png)
 
-`ft_red` apply a red filter on the image using multiplication only.
+`ft_red` apply a red filter on the image using assignment only.
 ```py
 img[:,:,1:] = 0
 ```
 [Red filter](./imgs/red.png)
 
-`ft_green` apply a green filter on the image using multiplication only.
+`ft_green` apply a green filter on the image using assignment only.
 ```py
 img[:,:,0] = 0
 img[:,:,2] = 0
 ```
 [green filter](./imgs/green.png)
 
-`ft_blue` apply a blue filter on the image using multiplication only.
+`ft_blue` apply a blue filter on the image using assignment only.
 ```py
 img[:,:,0] = 0
 img[:,:,2] = 0
 ```
 [blue filter](./imgs/blue.png)
+
+
+`ft_grey` apply a grey filter on the image using assignment only.
+```py
+m = img.mean(2)
+
+img[:,:,0] = m
+img[:,:,1] = m
+img[:,:,2] = m
+```
+[grey filter](./imgs/grey.png)

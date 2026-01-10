@@ -64,3 +64,23 @@ def ft_blue(array: ndarray) -> ndarray:
         print("Error:", e)
 
     return array
+
+
+def ft_grey(array: ndarray) -> ndarray:
+    """Applies a grey filter to the image received."""
+    try:
+        array = array.copy()
+        m = array.mean(2)
+
+        array[:, :, 0] = m
+        array[:, :, 1] = m
+        array[:, :, 2] = m
+
+        print(array)
+
+        plt.imshow(array)
+        plt.show()
+    except Exception as e:
+        print("Error:", e)
+
+    return array
