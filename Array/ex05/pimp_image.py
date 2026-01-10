@@ -48,3 +48,19 @@ def ft_green(array: ndarray) -> ndarray:
         print("Error:", e)
 
     return array
+
+
+def ft_blue(array: ndarray) -> ndarray:
+    """Applies a blue filter to the image received."""
+    try:
+        array = array.copy()
+        array[:, :, :2] = 0
+
+        print(array)
+
+        plt.imshow(array)
+        plt.show()
+    except Exception as e:
+        print("Error:", e)
+
+    return array

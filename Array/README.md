@@ -126,3 +126,10 @@ img[:,:,0] = 0
 img[:,:,2] = 0
 ```
 [green filter](./imgs/green.png)
+
+`ft_blue` apply a blue filter on the image using multiplication only.
+```py
+img[:,:,0] = 0
+img[:,:,2] = 0
+```
+[blue filter](./imgs/blue.png)
