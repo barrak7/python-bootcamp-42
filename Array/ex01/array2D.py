@@ -22,26 +22,22 @@ def slice_me(family: list, start: int, end: int) -> list:
     -------
     slice_ (list[list]): 2D list after slicing.
     """
-    slice_: list
-    n: int
+    slice_: list = []
 
-    assert isinstance(family, list), "First argument must be a 2D list"
+    try:
+        assert isinstance(family, list), "First argument must be a 2D list"
 
-    n = len(family)
+        for i, v in enumerate(family):
+            assert isinstance(v, list), "First argument must be a 2D list"
+            assert len(v) == len(family[i - 1]), "Lists must be the same size"
 
-    for i, v in enumerate(family):
-        assert isinstance(v, list), "First argument must be a 2D list"
-        assert len(v) == len(family[i - 1]), "Lists must be the same size"
+        print(f"My shape is : {get_shape(family)}")
 
-    assert n - start >= 0 and n - end >= 0, "List index out range"
+        slice_ = family[start:end]
+        print(slice_)
 
-    assert n + end > start, "End index must be bigger than start index"
-
-    print(f"My shape is : {get_shape(family)}")
-
-    slice_ = family[start:end]
-    print(slice_)
-
-    print(f"My new shape is : {get_shape(slice_)}")
+        print(f"My new shape is : {get_shape(slice_)}")
+    except Exception as e:
+        print("Error:", e)
 
     return slice_

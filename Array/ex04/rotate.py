@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def zoom() -> ndarray | None:
+def zoom() -> ndarray:
     """
     Loads animal.jpeg using ft_load, resizes it, and prints its array.
 
@@ -14,12 +14,9 @@ def zoom() -> ndarray | None:
     Note: "animal.jpeg" should be located in the same directory where
     the script is executed.
     """
-    img: ndarray
+    img: ndarray = np.array([])
 
     img = ft_load("animal.jpeg")
-
-    if isinstance(img, int):
-        return None
 
     img = img[130:530:, 460:860, 0]
 
@@ -44,9 +41,6 @@ def rotate() -> None:
     the script is executed.
     """
     img: ndarray = zoom()
-
-    if img is None:
-        return
 
     img = np.hsplit(img, 400)
     img = np.stack(img).reshape(400, 400)

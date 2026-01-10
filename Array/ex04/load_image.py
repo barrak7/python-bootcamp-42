@@ -11,7 +11,7 @@ def ft_load(path: str) -> ndarray:
     Note: the image path should be either a full path,
         or a path relative to the executing script.
     """
-    img_arr: ndarray
+    img_arr: ndarray = np.array([])
 
     try:
         with Image.open(path) as img:
@@ -19,7 +19,5 @@ def ft_load(path: str) -> ndarray:
 
     except Exception as e:
         print("Error:", e)
-
-        return -1
 
     return img_arr

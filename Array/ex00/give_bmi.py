@@ -22,18 +22,15 @@ def give_bmi(
     bmi_scale (list[int | float]): list of bmi scales corresponding to
         the given height and weight lists.
     """
-    bmi_scale: list
+    bmi_scale: list = []
 
     try:
-        assert len(height) == len(weight), ""
+        assert len(height) == len(weight), "input must be of the same length"
 
         bmi_scale = [weight[i] / (height[i] ** 2) for i in range(len(height))]
 
-    except Exception:
-        raise ValueError(
-            "Invalid input. Please provide 2 lists of the same length"
-            " containing heights in meter and weights in kg respectively."
-        )
+    except Exception as e:
+        print("Error:", e)
 
     return bmi_scale
 
@@ -56,14 +53,11 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
         true if corresponding bmi scale is higher than limit,
         false otherwise.
     """
-    above_limit: list[bool]
+    above_limit: list[bool] = []
 
     try:
         above_limit = [e > limit for e in bmi]
-    except Exception:
-        raise ValueError(
-            "Invalid input. Please provide a list of bmi scale values"
-            " and a numerical limit to test against."
-        )
+    except Exception as e:
+        print("Error:", e)
 
     return above_limit
