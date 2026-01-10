@@ -61,3 +61,27 @@ My shape is : (4, 2)
 My new shape is : (1, 2)
 [[2.15, 102.7]]
 ```
+
+## Ex02: load my image
+Load an image file using any library, print its shape, and return its RGB values.
+
+For this exercises, I used the `pillow` library to load the images, then `numpy` to convert it to an array.
+```py
+# Prototype
+def ft_load(path: str) -> ndarray:
+
+# test
+from load_image import ft_load
+
+print(ft_load("landscape.jpg"))
+
+# output
+The shape of image is: (257, 450, 3)
+[[[19 42 83]
+[23 42 84]
+[28 43 84]
+...
+[ 0 0 0]
+[ 1 1 1]
+[ 1 1 1]]]
+```
