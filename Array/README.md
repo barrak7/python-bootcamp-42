@@ -106,16 +106,16 @@ create 5 functions that apply color filters to images.
 For each filter there is a restriction of the possible arithmetic operations.
 
 The original image for reference:
-[Original image](./landscape.jpg)
+[Original image](./imgs/landscape.jpg)
 
 `ft_invert` invert the colors of the image. All arithmetic operators are allowed.
 ```py
 img = 255 - img
 ```
-[Inverted image](./inverted.png)
+[Inverted image](./imgs/inverted.png)
 
 `ft_red` apply a red filter on the image using multiplication only.
 ```py
 img[:,:,1:] *= 0
 ```
-[Red filter](./red.png)
+[Red filter](./imgs/red.png)
