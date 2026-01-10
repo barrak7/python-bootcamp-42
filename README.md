@@ -7,3 +7,8 @@ The bootcamp is broken into multiple modules, each focusing on a specific topic.
 The first module of the bootcamp. Its focus is on the basics of python. in 10 Modules, it introduces basic data types, syntax, functions, list comprehensions, iterators, generators, packages, etc...
 
 Refer to [Starting Readme](/Starting/README.md) for details.
+
+## Array
+Understanding and working with different python arrays. Introduces, lists, numpy arrays, image reading, manipulation, and display libraries like `Pillow` and `matplotlib`.
+
+Refer to [Array Readme](/Array/README.md) for details.
