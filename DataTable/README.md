@@ -56,3 +56,31 @@ plt.plot(df, label="Morocco")
 plt.legend(loc=4)
 ```
 ![Morocco Vs. Taiwan Population](./imgs/population.png)
+
+# Ex03: draw my year
+using a scatter plot, show the relationship between GDP and life expectancy for the year 1900 for all the countries.
+
+```py
+# load gdp and life expectancy data for year 1900
+gdp: DataFrame = load(
+    "income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
+)
+life: DataFrame = load("life_expectancy_years.csv")
+
+gdp = gdp.loc[:, '1900']
+life = life.loc[:, '1900']
+
+# Scatter plot
+plt.scatter(gdp, life)
+
+# set the x axis scale to log scale, set the labels, title, and display the graph
+plt.xscale('log')
+plt.xticks([300,1000,10000], ['300', '1K', '10K'])
+
+plt.title("1900")
+plt.xlabel("Gross domestic product")
+plt.ylabel("Life Expectancy")
+
+plt.show()
+```
+![life expectancy correlation with GDP](./imgs/gdp_life.png)
