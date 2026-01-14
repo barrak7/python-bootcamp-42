@@ -12,3 +12,8 @@ Refer to [Starting Readme](/Starting/README.md) for details.
 Understanding and working with different python arrays. Introduces, lists, numpy arrays, image reading, manipulation, and display libraries like `Pillow` and `matplotlib`.
 
 Refer to [Array Readme](/Array/README.md) for details.
+
+# DataTable
+Working with pandas to load and work with csv files. Work with pandas dataframes. Learn how to index a dataframe / series. Plot data with matplotlib using different type of graphs and adjusting the parameters of the graph.
+
+Refer to [DataTable Readme](/DataTable/README.md) for details.
