@@ -1,7 +1,7 @@
 # OOP
 learn oop in python: abstract class, inheritance, overriding, property, and operator overriding.
 
-# Ex00: GOT S1E9
+## Ex00: GOT S1E9
 Implement an abstract class with an abstract method, and then inherit from it and implement the abstract method.
 
 Features of an Abstract Class:
