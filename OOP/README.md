@@ -102,3 +102,9 @@ class King(Baratheon, Lannister):
     # eyes property - access and assignment to `eyes` will be through `get_eyes` and `set_eyes` methods
     eyes = property(get_eyes, set_eyes)
 ```
+
+## Ex03: Calculate my vector
+in this exercise, create a class `calculator` that performs arithmetic operations on a vector with a scalar.  
+This was done through operator overloading. i.e. redefining / defining the behaviour of the `+-*/` operators for your class.
+
+This can be done by implementing the dunder methods: `__add__`, `__sub__`, `__mul__`, and `__truediv__`
