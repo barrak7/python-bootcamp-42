@@ -108,3 +108,32 @@ in this exercise, create a class `calculator` that performs arithmetic operation
 This was done through operator overloading. i.e. redefining / defining the behaviour of the `+-*/` operators for your class.
 
 This can be done by implementing the dunder methods: `__add__`, `__sub__`, `__mul__`, and `__truediv__`
+
+## Ex04: Calculate my dot product
+create a `calculator` class that performs `dot-product`, `addition`, and `subtraction` over two lists / vectors of float values.
+
+The class should implement methods `dotproduct`, `add_vec`, and `sous_vec`. These methods take two lists of floats, and can be used without needing to instantiate the class.
+
+To solve this exercise, I used the `@staticmethod` decorator to create a static method.  
+A static method in python is a method that is related to a class, but it doesn't operate on any of the class attributes, unlike a `class method` which takes the class or `cls` as its first argument as we saw in [Ex01](#ex01-got-s1e7)
+
+> [!NOTE]
+> No error handling was required for these 2 exercises.
+
+```py
+class calculator:
+    @staticmethod
+    def dotproduct(V1: list[float], V2: list[float]) -> None:
+        re: float = 0
+
+        for i in range(len(V1)):
+            re += V1[i] * V2[i]
+
+        print("Dot product is:", re)
+
+a = [1, 2, 4]
+b = [2.4, 0.0, 8.3]
+
+# use of static method doesn't require instance of class
+calculator.dotproduct(a, b)
+```
