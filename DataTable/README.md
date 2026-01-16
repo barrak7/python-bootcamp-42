@@ -44,11 +44,6 @@ figure out how to plot multiple lines, manipulate data before plotting, and how 
 # slice the data
 df = df[:'2050']
 
-# map lambda over values to convert from number abbreviation format to float
-f = lambda x: float(x[:-1])
-
-df = df.map(f)
-
 # add label to plot for legend
 plt.plot(df, label="Morocco")
 

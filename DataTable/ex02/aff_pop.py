@@ -6,11 +6,31 @@ from pandas import DataFrame
 def set_yticks(mmax: float, tmax: float) -> None:
     """Set the plot's yticks and labels."""
     max_ = int(max(mmax, tmax))
+    max_ //= 1_000_000
 
     ticks: range = range(20, max_, 20)
     labels: list = [f"{i}M" for i in ticks]
 
-    plt.yticks(ticks, labels)
+    # scale back tick positions
+    sticks: list[float] = [i * 1e6 for i in ticks]
+
+    plt.yticks(sticks, labels)
+
+
+def convert_num(num: str) -> float:
+    """
+    Converts num from abbreviated number notation to float.
+    It assumes the data is always valid.
+    """
+    factor: dict[str, int] = {"B": 1_000_000_000, "M": 1_000_000, "K": 1_000}
+    re: float
+
+    if num[-1] in factor:
+        re = float(num[:-1]) * factor[num[-1]]
+    else:
+        re = float(num[:-1])
+
+    return re
 
 
 def display(mdf: DataFrame, tdf: DataFrame) -> None:
@@ -27,8 +47,8 @@ def display(mdf: DataFrame, tdf: DataFrame) -> None:
     and -1 is returned.
     """
     try:
-        mdf = mdf.map(lambda x: float(x[:-1]))
-        tdf = tdf.map(lambda x: float(x[:-1]))
+        mdf = mdf.map(convert_num)
+        tdf = tdf.map(convert_num)
 
         plt.plot(mdf, label="Morocco")
         plt.plot(tdf.values, label="Taiwan")
