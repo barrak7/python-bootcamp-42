@@ -77,3 +77,28 @@ class Lannister(Character):
         """class method that serves as factory method for Lannister class."""
         return cls(first_name, is_alive)
 ```
+
+## Ex02: Now it's weird!
+This exercise introduces the diamond problem of inheritance. It also introduces python's built-in `property`
+
+Create a class that inherits from 2 Other classes that subclass the same class. This will create the diamond problem, but python deals with this problem natively using [The Python Method Resolution Order - MRO](https://docs.python.org/3/howto/mro.html#python-2-3-mro)
+
+The class should have setter and getters for some of its attributes, and it should use the `property` class.  
+The property class / decorator allows you to customise access to the attribute using `setter` and `getter` methods.
+
+```py
+# diamond trap - python automatically resolves the problem by giving precedence to the first class
+class King(Baratheon, Lannister):
+    """False king."""
+
+    def get_eyes(self) -> str:
+        """eyes getter"""
+        return self._eyes
+
+    def set_eyes(self, color: str) -> None:
+        """eyes setter"""
+        self._eyes = color
+
+    # eyes property - access and assignment to `eyes` will be through `get_eyes` and `set_eyes` methods
+    eyes = property(get_eyes, set_eyes)
+```
