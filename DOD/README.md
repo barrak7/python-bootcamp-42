@@ -2,7 +2,7 @@
 
 The subject for this module states:
 > "A common complaint to data scientists is that they write shitcode (by the way, only for
-educational purposes you may find a lot of examples of Python shitcode [here](), provided
+educational purposes you may find a lot of examples of Python shitcode [here](https://shitcode.net/latest/language/python), provided
 strictly for educational purposes). Why? Because the average data scientist uses a lot of
 inefficient techniques and hard coded variables and neglects object-oriented programming.
 Do not be like them."
