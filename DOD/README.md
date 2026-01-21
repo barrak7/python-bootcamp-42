@@ -30,3 +30,22 @@ def wrapper(func):
     return inner
 ```
 A decorator can also be quite useful for logging purposes.
+
+## Ex01: Outer - Inner
+create a function that squares x, a function that raises x to itself, and an `outer` function that takes x and a function as input, and returns an `inner` function.  
+Every time this inner function is executed, it updates x with the result of function(x).
+
+```py
+def outer(x, fun):
+    def inner():
+        nonlocal x
+
+        x = fun(x)
+
+        return x
+
+    return inner
+```
+The `nonlocal` keyword allows us to access and update the value x so that every time inner is executed, fun(x) is accumulated.
+
+To get an intuition behind how `nonlocal` works, checkout [python cell objects](https://docs.python.org/3/c-api/cell.html) and [python \__closure__](https://docs.python.org/3/reference/datamodel.html#special-read-only-attributes)
