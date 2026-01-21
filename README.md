@@ -22,3 +22,8 @@ Refer to [DataTable Readme](/DataTable/README.md) for details.
 Learn about object oriented programming in python: classes, inheritance, abstract classes & methods, dunder methods, class methods, static methods, `property`, operator overloading, etc...
 
 Refer to [OOP Readme](/OOP/README.md) for details.
+
+## DOD
+An intro into `@decorators`, `@wrappers`, `@dataclass`, and `*args` and `**kwargs` syntax. It's usually said that data scientists write bad code, and this module is here to change it.
+
+Refer to [DOD Readme](/DOD/README.md) for details.
