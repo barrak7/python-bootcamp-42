@@ -49,3 +49,47 @@ def outer(x, fun):
 The `nonlocal` keyword allows us to access and update the value x so that every time inner is executed, fun(x) is accumulated.
 
 To get an intuition behind how `nonlocal` works, checkout [python cell objects](https://docs.python.org/3/c-api/cell.html) and [python \__closure__](https://docs.python.org/3/reference/datamodel.html#special-read-only-attributes)
+
+## Ex02: my first decorating
+In this exercise, implement a decorator which consists of 3 nested functions, `callLimit`, `callLimiter`, and `limit_function`.  
+The first one, takes in a number which represents the limit. The second one takes a function for which to enforce the limit. The third one is the counter that updates the count and checks if the limit has been reached yet.
+
+This is quite a salad, but it works.
+
+```py
+def callLimit(limit: int):
+    # takes in limit, returns call limiter
+    count = 0
+    def callLimiter(function):
+        # takes in function, returns limit function
+        def limit_function(*args, **kwrags):
+            # updates counter, applies limit, executes function
+            nonlocal count
+            
+            if count >= limit:
+                print("Error: execution limit exceeded")
+                return
+            
+            result = function(*args, **kwargs)
+
+            count += 1
+
+            return result
+        
+        return limit_function
+    
+    return callLimiter
+```
+This can be used as follows:
+```py
+from callLimit import callLimit
+
+
+@callLimit(2)
+def f():
+    print("f()")
+
+# since the limit was set to 2, it will print an error on the third execution
+for i in range(3):
+    f()
+```
